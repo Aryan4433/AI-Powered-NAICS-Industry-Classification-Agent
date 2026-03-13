@@ -1,65 +1,45 @@
 # AI-Powered-NAICS-Industry-Classification-Agent
 
+# NAICS Industry Classification Agent
 
-An AI-powered industry classification system that predicts NAICS 2022 codes for organizations using a Retrieval-Augmented Generation (RAG) architecture.
-The system combines semantic search, vector similarity, web retrieval, and LLM reasoning to enrich company datasets with accurate industry classifications.
+An AI-powered **industry classification assistant** that automatically predicts **NAICS (North American Industry Classification System) codes** based on company descriptions.
 
-Overview
+The system leverages **LLMs, semantic search, and embeddings** to intelligently match business activities with the most relevant NAICS categories.
 
-This project automates NAICS industry code prediction for large batches of organizations.
+This project demonstrates how **LLM agents + vector search** can be used to improve **industry data enrichment and classification accuracy**.
 
-The pipeline works as follows:
+---
 
-User uploads an Excel/CSV file containing organization names.
+## Features
 
-The system retrieves relevant NAICS descriptions using FAISS vector similarity search.
+- AI-powered **NAICS code prediction**
+- **Semantic similarity search** using embeddings
+- Interactive **Streamlit web interface**
+- Batch processing for multiple company descriptions
+- Supports **industry classification automation**
+- Uses **vector search for accurate matching**
+- Easily extendable for other classification systems (SIC, ISIC, NACE)
 
-It performs live web search to gather additional company context.
+---
 
-An LLM (via ChatGroq) analyzes the information and predicts the best NAICS 2022 code.
+## Tech Stack
 
-Results are returned as an enriched dataset that can be downloaded.
+- Python  
+- LangChain  
+- Streamlit  
+- Sentence Transformers  
+- FAISS  
+- HuggingFace Models  
 
-The system provides higher accuracy and reduced hallucination by combining structured NAICS data with external knowledge retrieval.
+Libraries used:
 
-Key Features
+- `langchain`
+- `sentence-transformers`
+- `faiss-cpu`
+- `streamlit`
+- `pandas`
 
-Batch organization industry classification
+---
 
-Retrieval-Augmented Generation (RAG) architecture
+## Project Structure
 
-Semantic similarity search using FAISS
-
-LLM reasoning with ChatGroq
-
-Real-time web information retrieval
-
-Streamlit interface for easy interaction
-
-Excel export of enriched results
-
-FastAPI deployment for production APIs
-
-System Architecture
-
-Input Data → Web Search + Embedding Retrieval → FAISS Vector Search → LLM Reasoning → NAICS Prediction → Enriched Output
-
-Tech Stack
-
-Python
-
-Streamlit – User Interface
-
-FastAPI – API deployment
-
-LangChain – LLM orchestration
-
-ChatGroq (LLaMA 3.1) – Large Language Model
-
-SentenceTransformers – Text embeddings
-
-FAISS – Vector similarity search
-
-DuckDuckGo Search API – Web information retrieval
-
-Pandas / NumPy – Data processing
