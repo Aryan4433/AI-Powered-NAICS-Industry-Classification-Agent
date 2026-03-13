@@ -9,6 +9,28 @@ The system leverages **LLMs, semantic search, and embeddings** to intelligently 
 This project demonstrates how **LLM agents + vector search** can be used to improve **industry data enrichment and classification accuracy**.
 
 ---
+## Pipeline
+
+The system follows a hybrid **Retrieval-Augmented Generation (RAG)** pipeline for accurate NAICS classification.
+
+The pipeline works as follows:
+
+1. **User Input**  
+   The user uploads an **Excel or CSV file** containing organization or company names.
+
+2. **Vector Similarity Search**  
+   The system retrieves relevant **NAICS descriptions** using **FAISS vector similarity search** based on semantic embeddings.
+
+3. **Web Context Retrieval**  
+   A **live web search** is performed to gather additional contextual information about each company.
+
+4. **LLM Reasoning**  
+   An **LLM (via ChatGroq)** analyzes both the NAICS descriptions and retrieved web context to predict the **most appropriate NAICS 2022 classification code**.
+
+5. **Data Enrichment Output**  
+   The results are returned as an **enriched dataset**, including predicted NAICS codes, which users can download.
+
+By combining **structured NAICS data**, **semantic retrieval**, and **external knowledge**, the system improves classification accuracy and reduces hallucinations compared to standalone LLM predictions.
 
 ## Features
 
